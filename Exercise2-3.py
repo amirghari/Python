@@ -1,15 +1,10 @@
-gender = input("Enter your gender")
-if gender == "male":
-    hmValue = input("Enter your hemoglobin value")
-    if 134 <= int(hmValue) <= 167:
-        print("Your hemoglobin value is normal.")
-    else:
-        print("Your hemoglobin value is Not normal.")
-elif gender == "female":
-    hmValue = input("Enter your hemoglobin value")
-    if 117 <= int(hmValue) <= 155:
-        print("Your hemoglobin value is normal.")
-    else:
-        print("Your hemoglobin value is Not normal.")
-else:
-    print("Please type 'female' or 'male' as your gender.")
+length = input("Enter the Length of the rectangle.")
+width = input("Enter the width of the rectangle.")
+
+lengthInt = int(length)
+widthInt = int(width)
+
+area = lengthInt * widthInt
+perimeter = 2 * (lengthInt + widthInt)
+
+print("The area of the rectangle is " + str(area) + " and the perimeter of it is " + str(perimeter) + " .")
