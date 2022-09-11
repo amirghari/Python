@@ -7,4 +7,4 @@ for x in range(times):
     numbers.append(dice)
     sum += dice
 print(numbers)
-print(sum)
+print("The sum of the dices is " + str(sum) + ".")
