@@ -4,9 +4,9 @@ def dice(times):
     return random.randint(1, times)
 result = dice(side)
 while result != side:
-    print(result)
+    print( "dice " + str(result))
     result = dice(side)
-print(result)
+print("dice " + str(result))
 
 
 

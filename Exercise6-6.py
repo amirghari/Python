@@ -1,15 +1,17 @@
-import math
-def calcPricePizza(diameter, price,name):
-    areaPizza = math.pi * diameter * diameter
-    print("The price per square meter of pizza",name,f": {price / (areaPizza * 0.0001):.3f}")
-    return price / (areaPizza * 0.0001)
-dia1 = float(input("Input the diameter of pizza 1 in cm: "))
-price1 = float(input("Input the price of pizza 1 in euro: "))
-dia2 = float(input("Input the diameter of pizza 2 in cm: "))
-price2 = float(input("Input the price of pizza 2 in euro: "))
-if calcPricePizza(dia1,price1,1) < calcPricePizza(dia2,price2,2):
-    print("Pizza 1 is cheaper than pizza 2")
-elif calcPricePizza(dia1,price1,1) > calcPricePizza(dia2,price2,2):
-    print("Pizza 2 is cheaper than pizza 1")
+def pricePerUnit(diameter,price):
+    area = float((3.14 * (diameter/2) * (diameter/2)) / 100)
+    preicePerSqueredmeter = price/area
+    return preicePerSqueredmeter
+firstInputPrice = int(input("Enter the price of the first pizza in euro"))
+firstInputDiameter = int(input("Please enter the diameter of the first pizza in cm."))
+
+secondInputPrice = int(input("Enter the price of the second pizza in euro"))
+secondInputDiameter = int(input("Please enter the diameter of the second pizza in cm."))
+
+priceEfficiency1 = pricePerUnit(firstInputDiameter, firstInputPrice)
+priceEfficiency2 = pricePerUnit(secondInputDiameter, secondInputPrice)
+
+if (priceEfficiency1 < priceEfficiency2):
+    print("First Pizza is more economical")
 else:
-    print("Same price")
+    print("Second Pizza is more economical")
