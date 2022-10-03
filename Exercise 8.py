@@ -55,4 +55,21 @@ airport_finder(country_code)
 heliport(country_code)
 
 
+# Part 3
 
+
+from geopy import distance
+mycursor = testDB.cursor()
+icao1 = input("Input the first ICAO code: ")
+mycursor.execute(f"select name from airport where ident = '{icao1}';")
+result = mycursor.fetchall()
+print(tabulate(result, tablefmt="fancy_grid"))
+icao2 = input("Input the second ICAO code: ")
+mycursor.execute(f"select name from airport where ident = '{icao2}';")
+result = mycursor.fetchall()
+print(tabulate(result, tablefmt="fancy_grid"))
+mycursor.execute(f"select latitude_deg, longitude_deg from airport where ident = '{icao1}' or ident = '{icao2}';")
+listDeg = []
+for x in mycursor:
+    listDeg.append(x)
+print(f"The distance between 2 airports is", f"{distance.distance(listDeg[0], listDeg[1]).km:.2f} km")

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5381c79d-016d-4606-9d56-1c75164ba8f7" name="Changes" comment="1st">
-      <change beforePath="$PROJECT_DIR$/Exercise 8-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise 8-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Exercise 8-1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="Exercise 8" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,7 +81,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exercise 8-1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exercise 8.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -239,7 +239,10 @@
       <workItem from="1664458558533" duration="2268000" />
       <workItem from="1664526301560" duration="99000" />
       <workItem from="1664527008718" duration="478000" />
-      <workItem from="1664527489274" duration="10585000" />
+      <workItem from="1664527489274" duration="11711000" />
+      <workItem from="1664820943637" duration="599000" />
+      <workItem from="1665052814914" duration="598000" />
+      <workItem from="1665124049576" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1662364576986</created>
@@ -444,7 +447,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664726365776</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="1st">
+      <created>1664787127449</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1664787127449</updated>
+    </task>
+    <task id="LOCAL-00031" summary="1st">
+      <created>1664787617189</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664787617189</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
