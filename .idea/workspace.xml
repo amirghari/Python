@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5381c79d-016d-4606-9d56-1c75164ba8f7" name="Changes" comment="1st">
+    <list default="true" id="5381c79d-016d-4606-9d56-1c75164ba8f7" name="Changes" comment="Done">
+      <change afterPath="$PROJECT_DIR$/hh.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise9.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/amirghari/Documents/Metropolia/Python/Exercises&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;two.files.diff.last.used.file&quot;: &quot;/Users/amirghari/Documents/Metropolia/Python/Exercises/Exercise 7-3.py&quot;
   }
 }</component>
@@ -45,7 +47,7 @@
       <force-push-target remote-path="origin" branch="main" />
     </force-push-targets>
   </component>
-  <component name="RunManager" selected="Python.Exercise 8-1">
+  <component name="RunManager" selected="Python.Exercise9">
     <configuration name="Exercise 7-3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -134,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Exercise7-2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Exercise9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -147,7 +149,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exercise7-2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exercise9.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Exercise9" />
         <item itemvalue="Python.Test" />
         <item itemvalue="Python.Exercise4-3" />
         <item itemvalue="Python.Exercise 7-3" />
         <item itemvalue="Python.Exercise6-4" />
-        <item itemvalue="Python.Exercise7-2" />
       </list>
     </recent_temporary>
   </component>
@@ -243,6 +245,10 @@
       <workItem from="1664820943637" duration="599000" />
       <workItem from="1665052814914" duration="598000" />
       <workItem from="1665124049576" duration="598000" />
+      <workItem from="1666636511088" duration="6579000" />
+      <workItem from="1666685416436" duration="1367000" />
+      <workItem from="1666722753791" duration="909000" />
+      <workItem from="1666764806772" duration="15216000" />
     </task>
     <task id="LOCAL-00001" summary="1st">
       <created>1662364576986</created>
@@ -461,7 +467,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664787617189</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Done">
+      <created>1666636737615</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666636737615</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Done">
+      <created>1666636763888</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1666636763888</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Done">
+      <created>1666655407212</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1666655407212</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,12 +507,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st" />
+    <MESSAGE value="Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Python$Exercise4_3.coverage" NAME="Exercise4-3 Coverage Results" MODIFIED="1662554404723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Exercise5_1.coverage" NAME="Exercise5-1 Coverage Results" MODIFIED="1663237588816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Exercise3_2_py$Exercise_8_1.coverage" NAME="Exercise 8-1 Coverage Results" MODIFIED="1664787041441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Exercise3_2_py$Exercise9.coverage" NAME="Exercise9 Coverage Results" MODIFIED="1666792511389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Exercise5_4.coverage" NAME="Exercise5-4 Coverage Results" MODIFIED="1663238910249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Exercise6_2.coverage" NAME="Exercise6-2 Coverage Results" MODIFIED="1663240386418" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Python$Exercise_8_1.coverage" NAME="Exercise 8-1 Coverage Results" MODIFIED="1664443796377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
