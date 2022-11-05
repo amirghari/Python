@@ -20,7 +20,7 @@ class Car:
     def drive(self, hours):
         self.hours = hours
         self.travelled_distance += self.hours * self.max_speed
-        print(f"The Travelled distance is {self.travelled_distance}")
+        # print(f"The Travelled distance is {self.travelled_distance}")
 
 
 new_car = Car("ABC-123", 142)
