@@ -1,3 +1,4 @@
+# Part 1
 class Publication:
     def __init__(self, book_count: int, author: str):
         self.book_count = book_count
@@ -30,3 +31,5 @@ Donald_Duck = Magazine("Aki Hyyppä")
 Compartment_No_6 = Book(192, "author Rosa Liksom")
 print(Donald_Duck)
 print(Compartment_No_6)
+
+# Part 2
