@@ -1,4 +1,5 @@
 from datetime import date
+from os import times
 
 
 # Mooc Part 8-1
@@ -294,11 +295,10 @@ class Stopwatch:
 
         return self.seconds, self.minutes
 
-
-
     def __str__(self):
         self.watch = [self.minutes, self.seconds]
         return f"{self.watch[0]}:{self.watch[1]}"
+
 
 class Clock:
 
@@ -328,13 +328,10 @@ class Clock:
         return self.hour, self.minute, self.second
 
 
-
-
 watch = Stopwatch()
 for i in range(3600):
     print(watch)
     watch.tick()
-
 
 clock = Clock(23, 59, 55)
 print(clock)
@@ -374,8 +371,8 @@ class LunchCard:
     def deposit_money(self, deposit: float):
         self.deposit = deposit
         self.balance = "{:.1f}".format(float(self.balance) + self.deposit)
-        
-        
+
+
 card = LunchCard(50)
 print(card)
 
@@ -401,4 +398,172 @@ print(card)
 
 # Mooc 8-16
 
+
+# Mooc 9-1
+
+
+class Car:
+    def __init__(self, name, speed):
+        self.name = name
+        self.speed = speed
+
+
+def fastest_car(cars_list):
+    top_speed = 0
+    for x in cars_list:
+        if x.speed > top_speed:
+            top_speed = x.speed
+            name = x.name
+    return name
+
+
+if __name__ == "__main__":
+    car1 = Car("Saab", 195)
+    car2 = Car("Lada", 110)
+    car3 = Car("Ferrari", 280)
+    car4 = Car("Trabant", 85)
+
+    cars = [car1, car2, car3, car4]
+    print(fastest_car(cars))
+
+
+# Mooc 9-2
+
+class ExamSubmission:
+    def __init__(self, examinee: str, points: int):
+        self.examinee = examinee
+        self.points = points
+
+
+def passed(examinee_list: list, min_point: int):
+    passing = []
+    for i in examinee_list:
+        if i.points >= min_point:
+            passed_list = []
+            passed_list.append(i.examinee)
+            passed_list.append(i.points)
+            passing.append(passed_list)
+    return passing
+
+
+
+
+
+if __name__ == "__main__":
+    s1 = ExamSubmission("Peter", 12)
+    s2 = ExamSubmission("Pippa", 19)
+    s3 = ExamSubmission("Paul", 15)
+    s4 = ExamSubmission("Phoebe", 9)
+    s5 = ExamSubmission("Persephone", 17)
+    exam_list = [s1, s2, s3, s4, s5]
+    # print(s1.points)
+    passes = passed(exam_list, 15)
+    for passing in passes:
+        print(f"ExamSubmission(examinee: {passing[0]}, points: {passing[1]})")
+
+
+# Mooc 9-3
+
+class Person:
+    def __init__(self, name: str, age: int, height: int, weigh: int):
+        self.name = name
+        self.age = age
+        self.height = height
+        self.weigh = weigh
+
+
+
+
+class BabyCentre:
+    times = 0
+    def weigh(self, person: Person):
+        # return the weight of the person passed as an argument
+        self.weigh_ins()
+        self.times += 1
+        return person.weigh
+
+    def feed(self, person: Person):
+        person.weigh += 1
+        return person.weigh
+
+    def weigh_ins(self):
+        return self.times
+
+
+baby_centre = BabyCentre()
+#
+eric = Person("Eric", 1, 110, 7)
+# peter = Person("Peter", 33, 176, 85)
+#
+# print(f"{eric.name} weighs {baby_centre.weigh(eric)} kg")
+# print(f"{peter.name} weighs {baby_centre.weigh(peter)} kg")
+#
+# # Part2
+#
+# baby_centre.feed(eric)
+# baby_centre.feed(eric)
+# baby_centre.feed(eric)
+#
+# print(f"{eric.name} weighs {baby_centre.weigh(eric)} kg")
+# print(f"{peter.name} weighs {baby_centre.weigh(peter)} kg")
+
+# Part 3
+
+print(f"Total number of weigh-ins is {baby_centre.weigh_ins()}")
+
+baby_centre.weigh(eric)
+baby_centre.weigh(eric)
+
+print(f"Total number of weigh-ins is {baby_centre.weigh_ins()}")
+
+baby_centre.weigh(eric)
+baby_centre.weigh(eric)
+baby_centre.weigh(eric)
+baby_centre.weigh(eric)
+
+print(f"Total number of weigh-ins is {baby_centre.weigh_ins()}")
+
+# Mooc 9-4
+
+
+
+
+
+
+# Mooc 9-5
+
+
+class RealProperty:
+    def __init__(self, rooms: int, square_metres: int, price_per_sqm: int):
+        self.rooms = rooms
+        self.square_metres = square_metres
+        self.price_per_sqm = price_per_sqm
+
+
+
+    def bigger(self, another_property: "RealProperty"):
+        if self.square_metres > another_property.square_metres:
+            return True
+        else:
+            return False
+
+    def price_difference(self, another_price: "RealProperty"):
+        total_price = (another_price.price_per_sqm/another_price.square_metres) - (self.price_per_sqm/self.square_metres)
+        # print(total_price)
+        difference = total_price * self.square_metres
+        return difference
+
+
+
+
+central_studio = RealProperty(1, 16, 5500)
+downtown_two_bedroom = RealProperty(2, 38, 4200)
+suburbs_three_bedroom = RealProperty(3, 78, 2500)
+
+print(central_studio.bigger(downtown_two_bedroom))
+print(suburbs_three_bedroom.bigger(downtown_two_bedroom))
+
+
+print(central_studio.price_difference(downtown_two_bedroom))
+# print(suburbs_three_bedroom.price_difference(downtown_two_bedroom))
 
