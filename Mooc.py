@@ -821,3 +821,39 @@ print(account.balance)
 account.deposit(100)
 print(account.balance)
 
+
+# Mooc 9-14
+
+class ListHelper:
+    def __init__(self):
+        pass
+
+    def greatest_frequency(self, my_list):
+        self.my_list = my_list
+        result = 0
+        greatest = 0
+        for number in my_list:
+            count = my_list.count(number)
+            if count > result:
+                result = count
+                greatest = number
+                return result, greatest
+        return greatest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+numbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]
+print(ListHelper.greatest_frequency(numbers))
+print(ListHelper.doubles(numbers))
