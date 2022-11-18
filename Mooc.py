@@ -567,3 +567,257 @@ print(suburbs_three_bedroom.bigger(downtown_two_bedroom))
 print(central_studio.price_difference(downtown_two_bedroom))
 # print(suburbs_three_bedroom.price_difference(downtown_two_bedroom))
 
+
+# Mooc 9-6
+
+
+
+
+# Mooc 9-7
+
+class Present:
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+
+    def __str__(self):
+        return f"{self.name}({self.weight}kg)"
+
+
+class Box:
+    weight = 0
+    def add_present(self, present):
+        self.present = present
+
+
+    def total_weight(self):
+        self.weight += self.present.weight
+        return self.weight
+
+
+    def __str__(self):
+        return f"{self.weight}"
+
+
+book = Present("ABC Book", 2)
+
+print("The name of the present:", book.name)
+print("The weight of the present:", book.weight)
+print("Present:", book)
+
+box = Box()
+box.add_present(book)
+print(box.total_weight())
+
+cd = Present("Pink Floyd: Dark Side of the Moon", 1)
+box.add_present(cd)
+print(box.total_weight())
+
+
+# Mooc 9-8
+
+class Person:
+    def __init__(self, name, height):
+        self.name = name
+        self.height = height
+
+
+class Room:
+    def __init__(self):
+        self.people = []
+    def add(self, person):
+        self.people.append(person)
+        return self.people
+
+    def is_empty(self):
+        if len(self.people) == 0:
+            return True
+        else:
+            return False
+
+    def print_contents(self):
+        for i in self.people:
+            print(f"{i.name}({i.height})")
+
+    def shortest(self):
+        if len(self.people) == 0:
+            return None
+        else:
+            shortest = self.people[0].height
+            for i in self.people:
+                if i.height < shortest:
+                    shortest = i.height
+                    self.shortest_person = i
+
+            return self.shortest_person
+
+
+    def remove_shortest(self):
+        self.people.remove(self.shortest_person)
+        return self.shortest_person
+
+room = Room()
+print("Is the room empty?", room.is_empty())
+room.add(Person("Lea", 183))
+room.add(Person("Kenya", 172))
+room.add(Person("Ally", 166))
+room.add(Person("Nina", 162))
+room.add(Person("Dorothy", 155))
+print("Is the room empty?", room.is_empty())
+room.print_contents()
+
+room.add(Person("Lea", 183))
+room.add(Person("Kenya", 172))
+room.add(Person("Nina", 162))
+room.add(Person("Ally", 166))
+
+print()
+
+print("Is the room empty?", room.is_empty())
+print("Shortest:", room.shortest())
+
+print()
+
+room.print_contents()
+
+removed = room.remove_shortest()
+print(f"Removed from room: {removed.name}")
+
+print()
+
+room.print_contents()
+
+
+# Mooc 9-9
+
+class Car:
+    def __init__(self):
+        self.__tank_amount = 0
+        self.__odometer = 0
+
+
+    def fill_up(self):
+        self.__tank_amount = 60
+        return self.__tank_amount
+
+    def drive(self, dis):
+        if self.__tank_amount > dis:
+            self.__odometer += dis
+            self.__tank_amount -= self.__odometer
+        else:
+            self.__odometer += self.__tank_amount
+            self.__tank_amount = 0
+        return self.__tank_amount, self.__odometer
+
+    def __str__(self):
+        return f"odometer reading {self.__odometer} km, petrol remaining {self.__tank_amount} litres"
+
+
+
+car = Car()
+print(car)
+car.fill_up()
+print(car)
+car.drive(20)
+print(car)
+car.drive(50)
+print(car)
+car.drive(10)
+print(car)
+car.fill_up()
+car.fill_up()
+print(car)
+
+
+# Mooc 9-10
+
+
+
+
+
+# Mooc 9-11
+
+class WeatherStation:
+    def __init__(self, name):
+        self.name = name
+        self.observations = []
+
+    def add_observation(self, observation):
+        self.observations.append(observation)
+
+    def latest_observation(self):
+        last_index = int(len(self.observations)) - 1
+        self.last_item = self.observations[last_index]
+        # print(self.last_item)
+        return self.last_item
+
+
+    def number_of_observations(self):
+        self.overall_num = len(self.observations)
+        return self.overall_num
+
+    def __str__(self):
+        return f"{self.name}, {self.overall_num} observations"
+
+
+
+
+station = WeatherStation("Houston")
+station.add_observation("Rain 10mm")
+station.add_observation("Sunny")
+print(station.latest_observation())
+
+station.add_observation("Thunderstorm")
+print(station.latest_observation())
+
+print(station.number_of_observations())
+print(station)
+
+
+# Mooc 9-12
+
+class BankAccount:
+    def __init__(self, name: str, account_no: str, balance: float):
+        self.name = name
+        self.account_no = account_no
+        self.balance = balance
+
+    def deposit(self, money: float):
+        self.money = money
+        self.balance += self.money
+        self.__service_charged()
+        return self.balance
+
+
+    def withdraw(self, money: float):
+        self.money = money
+        if self.balance > self.money:
+            self.__service_charged()
+            self.balance -= self.money
+        else:
+            print("Tou don't have enough budget")
+
+    def balance(self):
+        return self.balance
+
+    def __service_charged(self):
+        service = self.balance * 0.01
+        self.balance -= service
+        return self.balance
+
+
+
+
+
+
+
+
+
+
+
+account = BankAccount("Randy Riches", "12345-6789", 1000)
+account.withdraw(100)
+print(account.balance)
+account.deposit(100)
+print(account.balance)
+
