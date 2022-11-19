@@ -827,33 +827,53 @@ print(account.balance)
 class ListHelper:
     def __init__(self):
         pass
-
-    def greatest_frequency(self, my_list):
-        self.my_list = my_list
+    def greatest_frequency(self: list):
+        my_list = self
+        # print(my_list)
         result = 0
         greatest = 0
-        for number in my_list:
-            count = my_list.count(number)
+        for i in my_list:
+            count = my_list.count(i)
             if count > result:
                 result = count
-                greatest = number
-                return result, greatest
+                greatest = i
         return greatest
 
 
-
-
-
-
-
-
-
-
-
-
-
+    def doubles(self: list):
+        my_list = self
+        result = []
+        for i in my_list:
+            number = i
+            count = my_list.count(number)
+            if count >= 2 and number not in result:
+                result.append(number)
+        return len(result)
 
 
 numbers = [1, 1, 2, 1, 3, 3, 4, 5, 5, 5, 6, 5, 5, 5]
 print(ListHelper.greatest_frequency(numbers))
 print(ListHelper.doubles(numbers))
+
+# Mooc 9-15 (Incomplete)
+
+class Item:
+    def __init__(self, name: str, weight: int):
+        self.name = name
+        self.weight = weight
+
+    def __str__(self):
+        return f"{self.name}({self.weight}kg)"
+
+
+book = Item("ABC Book", 2)
+phone = Item("Nokia 3210", 1)
+
+print("Name of the book:", book.name)
+print("Weight of the book:", book.weight)
+
+print("Book:", book)
+print("Phone:", phone)
+
+
+
