@@ -25,7 +25,6 @@ celsius_round = str(round(celsius, 1))
 
 print("Temperature :" + str(celsius_round))
 
-#
 
 
 
