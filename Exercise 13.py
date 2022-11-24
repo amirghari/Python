@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 import math
 app = Flask(__name__)
 @app.route("/prime_number/<num>")
@@ -18,9 +18,8 @@ def prime_number(num):
 
 
 if __name__ == '__main__':
-    app.run(use_reloader= True, host='127.0.0.1', port=5000)
+    app.run(use_reloader=True, host='127.0.0.1', port=5000)
 
 # Part2
-
 
 
