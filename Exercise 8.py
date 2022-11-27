@@ -1,13 +1,13 @@
-import mysql.connector
+import mariadb
 
-connection = mysql.connector.connect(
-    host='127.0.0.1',
-    port=3306,
-    database='flight_game',
-    user='root',
-    password='root123',
-    autocommit=True
-)
+connection = mariadb.connect(
+         host='127.0.0.1',
+         port=3306,
+         database='flight_game2',
+         user='root',
+         password='root123',
+         autocommit=True
+         )
 #print(connection)
 def get_location(id):
     location = "SELECT name, municipality FROM airport WHERE ident ='"+id+"'"
@@ -24,16 +24,16 @@ get_location(airport_id)
 
 # PART 2
 
-import mysql.connector
 
-connection = mysql.connector.connect(
-    host='127.0.0.1',
-    port=3306,
-    database='flight_game',
-    user='root',
-    password='root123',
-    autocommit=True
-)
+
+connection = mariadb.connect(
+         host='127.0.0.1',
+         port=3306,
+         database='flight_game2',
+         user='root',
+         password='root123',
+         autocommit=True
+         )
 
 def airport_finder(code):
     small_number = "SELECT name, iso_country,type FROM airport"
