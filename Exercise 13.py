@@ -59,7 +59,7 @@ def get_airport(icao):
             "status": 400
         }
         json_response = json.dumps(response)
-        http_response = Response(response=json_response, status=400, mimetype="application/json")
+        http_response = response(response=json_response, status=400, mimetype="application/json")
         return http_response
 
 
